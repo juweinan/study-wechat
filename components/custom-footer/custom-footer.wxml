@@ -1,0 +1,36 @@
+<!-- 底部导航栏容器-自定义背景颜色-兼容 iPhoneX 底部横线 -->
+<view class="tabbar_box {{isIphoneX ? 'iphoneX-height' : ''}}" style="background: {{tabbar.backgroundColor}}">
+  <block wx:for="{{tabbar.list}}" wx:key="{{item.pagePath}}">
+    <!-- 凸起的导航按钮 -->
+    <navigator 
+      wx:if="{{item.isSpecial}}" 
+      style="color: {{tabbar.color}}" 
+      class="tabbar_nav" 
+      hover-class="none" 
+      url="{{item.pagePath}}" 
+      data-url="{{item.pagePath}}"
+      open-type="switchTab"
+    >
+      <!-- 针对凸起部分的图片容器进行定位，图片放大 -->
+      <view class="special-wrapper">
+        <image class="tabbar_icon" src="{{item.iconPath}}"></image>
+      </view>
+      <!-- 占位元素-flex 居中布局，不加占位的话文字会跑到中间 -->
+      <!-- <image class="special-text-wrapper"></image> -->
+      <!-- <text>{{item.text}}</text> -->
+    </navigator>
+    <!-- 正常的底部导航按钮 -->
+    <navigator 
+      wx:else 
+      style="color: {{item.selected ? tabbar.selectedColor : tabbar.color}}"
+      class="tabbar_nav" 
+      hover-class="none" 
+      url="{{item.pagePath}}"
+      open-type="switchTab"
+    >
+      <!-- 根据当前的选中状态展示图片 -->
+      <image class="tabbar_icon" src="{{item.selected ? item.selectedIconPath : item.iconPath}}"></image>
+      <text>{{item.text}}</text>
+    </navigator>
+  </block>
+</view>

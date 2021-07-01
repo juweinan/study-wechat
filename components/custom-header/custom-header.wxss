@@ -1,0 +1,26 @@
+/* components/custom-header.wxss */
+/* dingwei */
+.nav {
+  position: fixed;
+  width: 100%;
+  z-index: 10000000;
+}
+
+.back-btn {
+  position: absolute;
+  left: 40rpx;
+  display: flex;
+  align-items: center;
+  z-index: 10000001;
+}
+
+image {
+  width: 32rpx;
+  height: 36rpx;
+}
+
+.text {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+}

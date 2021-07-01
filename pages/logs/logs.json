@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "custom-footer": "/components/custom-footer/custom-footer"
+  },
+  "navigationBarTitleText": "查看启动日志"
+}

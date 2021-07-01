@@ -1,0 +1,3 @@
+<!--pages/page2/page2.wxml-->
+<text>pages/page2/page2.wxml</text>
+<custom-footer tabbar="{{tabbar}}"></custom-footer>

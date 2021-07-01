@@ -1,0 +1,62 @@
+/* 定位在底部以及整体大小布局等 */
+.tabbar_box {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+  width: 100%;
+  height: 98rpx;
+  display: flex;
+  justify-content: space-around;
+  box-shadow: 0 -12rpx 40rpx -10rpx #ccc;
+}
+
+/* 兼容 iPhoneX 横线 */
+.iphoneX-height {
+  padding-bottom: 66rpx;
+}
+
+/* 正常的每一个菜单导航按钮选项 */
+.tabbar_nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 20rpx;
+  height: 100%;
+  position: relative;
+}
+
+/* 导航菜单按钮图标 */
+.tabbar_icon {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+/* 特殊导航-凸起的样式-定位+圆角+边框 */
+.special-wrapper {
+  position: absolute;
+  top: -30rpx;
+  width: 113rpx;
+  height: 113rpx;
+  border-radius: 50%;
+  background: #fff;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 6rpx;
+  /* box-shadow: 0 -12rpx 40rpx -10rpx #ccc; */
+}
+
+/* 凸起的图片大小重新设置 */
+.special-wrapper .tabbar_icon {
+  width: 88rpx;
+  height: 88rpx;
+  padding-top: 7rpx;
+}
+
+/* 占位-防止凸起样式的文字跑到上面 */
+.special-text-wrapper {
+  width: 56rpx;
+  height: 56rpx;
+}

@@ -1,0 +1,8 @@
+<!-- 设置自定义头部的高度等于计算出来的高度 -->
+<view class="nav" style="height: {{navHeight}}px; background: #fff; opacity: {{opacity}}">
+  <view class="back-btn" style="top: {{navTop}}px; height: {{navButtonHeight}}px;">
+    <image src="{{imgSrc}}"></image>
+  </view>
+
+  <view class="text" style="top: {{navTop}}px; height: {{navButtonHeight}}px; line-height: {{navButtonHeight}}px">{{title}}</view>
+</view>
